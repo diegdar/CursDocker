@@ -6,7 +6,7 @@
 
 <!-- insert BCN Activa logo here -->
 
-### Primera sessió
+## Primera sessió
 
 * Instal·lar Docker:
   * [Instal·ar WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
@@ -26,7 +26,7 @@
   * Visual Code: [Visual Code](https://code.visualstudio.com/)
   * Azure Data Studio: [Azure Data Studio](https://azuredatastudio.net/)
 
-### Segona sessió
+## Segona sessió
 
 * Persistència de les dades:
   * Muntatge carpetes locals
@@ -42,7 +42,7 @@
   * Docker Hub
   * Altres alternatives: Azure Container Registry
 
-### Tercera sessió
+## Tercera sessió
 
 * Xarxes en docker
   * Tipus de xarxes
