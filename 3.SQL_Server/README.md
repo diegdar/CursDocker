@@ -3,7 +3,7 @@
 * Crearem un contenidor de SQL Server.
 
 ```language-bash
-docker run --rm -d --name sql1 -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=P@ssw0rd2022' -p 1433:1433 -v datavolum:/var/opt/mssql mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+docker run --rm -d --name sql1 -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=P@ssw0rd2022' -p 1433:1433 -v datavolum:/var/opt/ mcr.microsoft.com/mssql/server
 ```
 
 * Connectem amb Azure Data Studio.

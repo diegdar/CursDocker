@@ -5,18 +5,34 @@ Docker compose simplifica la creació de contenidors al permetre configurar de f
 Exemple amb SQL Server:
 
 ```docker-compose.yml
-version: "3.9"
+version: '3.9'
+
+networks:
+  app-network-public:
+    driver: bridge
+
+volumes:
+  sql-server-data:
+    driver: local
+  sqldata:
+  sqllog:
+  sqlbackup:
+
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+  db:
+    image: mcr.microsoft.com/mssql/server
+    container_name: db-sqlserver
+    networks:
+      - app-network-public
+    restart: always
+    env_file:
+      - sqlserver.env
+      - sapassword.env
     ports:
-      - 1433:1433
-    environment:
-      ACCEPT_EULA: Y
-      SA_PASSWORD: PasswordO1.
-      MSSQL_PID: Express
+      - '1433:1433'
     volumes:
-      - sqlserver-data:/var/opt/mssql
-volume:
-  sqlserver-data:
+      - sql-server-data:/var/opt/mssql/
+      - sqldata:/var/opt/sqlserver/data
+      - sqllog:/var/opt/sqlserver/log
+      - sqlbackup:/var/opt/sqlserver/backup
 ```
