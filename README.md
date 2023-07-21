@@ -4,8 +4,6 @@
 
 ![Docker logo](https://logos-marcas.com/wp-content/uploads/2021/03/Docker-Logo.png)
 
-<!-- insert BCN Activa logo here -->
-
 ## Primera sessió
 
 * Instal·lar Docker:
@@ -23,7 +21,11 @@
   * `docker exec`
 
 * Eines i utilitats:
-  * Visual Code: [Visual Code](https://code.visualstudio.com/)
+  * Visual Code: [Visual Code](https://code.visualstudio.com/):
+    * Extensions a instal·lar:
+      * Docker
+      * Remote Development
+      * SQL Server
   * Azure Data Studio: [Azure Data Studio](https://azuredatastudio.net/)
 
 ## Segona sessió
@@ -34,9 +36,13 @@
 
 * Exemples entorns d'execució:
   * Usant SQL Server a un contenidor
-  * Exemple codi Java
+  * Exemple codi Java amb remote development
 
 * Arxiu Dockerfile
+  * Creant imatge aplicació web
+  * Bones pràctiques instal·lació durant creació
+  * Crear aplicació Java contenidor
+  * Crear aplicació Java multistage
 
 * Treballant amb registres de contendidors
   * Docker Hub
