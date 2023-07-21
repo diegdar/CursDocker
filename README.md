@@ -59,3 +59,16 @@
 * Desplegant contenidors al cloud
   * Azure
   * AWS
+
+## Recursos i links interessants
+
+* Tutorials i cursos
+  * [Docker Docs](https://docs.docker.com)
+  * [Learn Docker in a Month of Lunches](https://diamol.net)
+  * [Docker Compose Tutorial: advanced Docker made simple](https://www.educative.io/blog/docker-compose-tutorial)
+  * [Tutorial bàsic Docker Raspberri PI](https://blog.330ohms.com/2022/07/30/tutorial-basico-para-usar-docker-en-tu-raspberry-pi/)
+ 
+* Curiositats
+  * [WebAssembly: Docker without containers!](https://wasmlabs.dev/articles/docker-without-containers/)
+  * [The Complete Guide to Docker Secrets](https://earthly.dev/blog/docker-secrets/)
+  * [Introducción a Kubernetes para principiantes](https://geekflare.com/es/kubernetes-introduction/)
