@@ -7,10 +7,9 @@ networks:
 volumes:
   sql-server-data:
     driver: local
-  sqldata:
-  sqllog:
-  sqlbackup:
-
+  sqldata: {}
+  sqllog: {}
+  sqlbackup: {}
 services:
   db:
     image: mcr.microsoft.com/mssql/server
