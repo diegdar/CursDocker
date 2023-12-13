@@ -3,4 +3,4 @@
   WORKDIR /usr/src/myapp
   RUN javac Main.java
   ENTRYPOINT [ "java","Main"]
-  CMD ["5"]
+  CMD ["8"]
