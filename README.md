@@ -1,4 +1,4 @@
-# Introducció a Docker 2023
+# Introducció a Docker 2024
 
 <!-- insert Docker logo here -->
 
@@ -19,6 +19,9 @@
   * `docker rm`
   * `docker logs`
   * `docker exec`
+  * `docker stop`
+  * `docker start`
+  * `docker image`
 
 * Eines i utilitats:
   * Visual Code: [Visual Code](https://code.visualstudio.com/):
@@ -36,6 +39,7 @@
 
 * Exemples entorns d'execució:
   * Usant SQL Server a un contenidor
+  * Usant MySQL a un contenidor
   * Exemple codi Java amb remote development
 
 * Arxiu Dockerfile
@@ -57,6 +61,9 @@
 * Docker-compose
   * Solució amb un sol contenidor
   * Desplegant solucions amb múltiples contenidors
+
+* Empaquetant aplicacions amb Docker
+  * Empaquetant aplicacions PHP
 
 * Orquestració de contenidors
   * Docker Swarm
