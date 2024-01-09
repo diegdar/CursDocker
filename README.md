@@ -51,7 +51,7 @@
   * Crear aplicació Java contenidor
   * Crear aplicació Java multistage
 
-* Treballant amb registres de contendidors
+* Treballant amb registres de contenidors
   * Docker Hub
   * Altres alternatives: Azure Container Registry
 
