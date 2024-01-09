@@ -29,6 +29,7 @@
       * Docker
       * Remote Development
       * SQL Server
+      * MySQL
   * Azure Data Studio: [Azure Data Studio](https://azuredatastudio.net/)
 
 ## Segona sessió
