@@ -35,7 +35,9 @@
 
 * Persistència de les dades:
   * Muntatge carpetes locals
-  * Volums
+  * Volums:
+    * Tipus de volums
+    * Diferències entre `docker run --mount` i `docker run -v`
 
 * Exemples entorns d'execució:
   * Usant SQL Server a un contenidor
@@ -80,7 +82,6 @@
   * [Learn Docker in a Month of Lunches](https://diamol.net)
   * [Docker Compose Tutorial: advanced Docker made simple](https://www.educative.io/blog/docker-compose-tutorial)
   * [Tutorial bàsic Docker Raspberri PI](https://blog.330ohms.com/2022/07/30/tutorial-basico-para-usar-docker-en-tu-raspberry-pi/)
- 
 * Curiositats
   * [WebAssembly: Docker without containers!](https://wasmlabs.dev/articles/docker-without-containers/)
   * [The Complete Guide to Docker Secrets](https://earthly.dev/blog/docker-secrets/)
