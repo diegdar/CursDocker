@@ -8,16 +8,16 @@
          url: 'gettime.php',
          success: function(data) {
              data = data.split(':');
-             $('#hours').html(data[0]);
-             $('#minutes').html(data[1]);
-             $('#seconds').html(data[2]);
+             $('#hora').html(data[0]);
+             $('#minuts').html(data[1]);
+             $('#segons').html(data[2]);
          }
      });
  }
 </script>
 
 <?php
-echo "<h1>Tu mensaje aquí</h1>";
+echo "<h1>Hora del sistema</h1>";
 echo 
 '<span id="hours">0</span>:<span id="minutes">0</span>:<span id="seconds">0</span>';
 ?>
