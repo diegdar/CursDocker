@@ -48,9 +48,13 @@
 * Arxiu Dockerfile
   * Creant imatge aplicació web
   * Bones pràctiques instal·lació durant creació
+  * Etiquetat
   * Crear aplicació Java contenidor
   * Crear aplicació Java multistage
 
+* Crear imatge a partir d'un contenidor
+  * docker commit
+      
 * Treballant amb registres de contenidors
   * Docker Hub
   * Altres alternatives: Azure Container Registry
