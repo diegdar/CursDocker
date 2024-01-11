@@ -51,7 +51,7 @@ volumes:
 
 A diferència dels altres mètodes, això garanteix que els secrets només estan disponibles per als serveis que han estat explícitament atorgats a l'accés i que els secrets només existeixen en memòria mentre aquest servei funciona.
 
-Prèviament hem creat els dos arxius de text amb les contrasenyes que volem utilitzar per a la base de dades. 
+Prèviament hem creat els dos arxius de text amb les contrasenyes que volem utilitzar per a la base de dades.
 
 ```bash
 echo "supersecret" > db_password.txt
