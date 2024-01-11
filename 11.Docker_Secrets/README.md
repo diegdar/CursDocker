@@ -63,3 +63,11 @@ Ara només cal executar:
 ```bash
 docker-compose up -d
 ```
+
+La gestió de secrets inicialment es va introduir a Docker Swarm, però ara també està disponible a Docker i Docker Compose tot i que amb algunes limitacions.
+
+Podeu trobar informació sobre els secrets a la documentació oficial de Docker i d'altres publicacions:
+
+- [How to use secrets in Docker Compose](https://docs.docker.com/compose/use-secrets/)
+- [Docker Secrets : Beginners Guide](https://medium.com/@younusraza909/docker-secrets-beginners-guide-73f0b60764aa)
+- [Docker Secrets Management](https://www.docker.com/blog/docker-secrets-management/)
