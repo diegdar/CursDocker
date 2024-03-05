@@ -142,7 +142,7 @@ El `-d` indica que s'executa en mode *dimoni* (en background) i el `-p` indica q
 
 Això és útil perquè no ocupa el terminal de l'equip. En aquest cas, el contenidor com executa un procés que no finalitza, es queda executant-se en segon pla.
 
-![Contenidor Nginx](/images/docker/docker-nginx.png)
+![Contenidor Nginx](images/docker-nginx.png)
 
 ## Publicant ports
 
