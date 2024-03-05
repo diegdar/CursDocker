@@ -4,91 +4,36 @@
 
 ![Docker logo](https://logos-marcas.com/wp-content/uploads/2021/03/Docker-Logo.png)
 
-## Primera sessió
+## Índex de sessions
 
-* Instal·lar Docker:
-  * [Instal·ar WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
-  * [Instal·lar actualizació de Kernel de Linux](https://docs.microsoft.com/es-es/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
-  * [Instal·lar Docker Desktop en Windows](https://docs.docker.com/desktop/windows/install/)
+- [Primera sessió](Sessio_1.md)
+- [Segona sessió](Sessio_2.md)
+- [Tercera sessió](Sessio_3.md)
 
-* Hello World en Docker `docker run hello-world`
+## Exemples
 
-* Comandes bàsiques:
-  * `docker ps`
-  * `docker run`
-  * `docker rm`
-  * `docker logs`
-  * `docker exec`
-  * `docker stop`
-  * `docker start`
-  * `docker image`
-
-* Eines i utilitats:
-  * Visual Code: [Visual Code](https://code.visualstudio.com/):
-    * Extensions a instal·lar:
-      * Docker
-      * Remote Development
-      * SQL Server
-      * MySQL
-  * Azure Data Studio: [Azure Data Studio](https://azuredatastudio.net/)
-
-## Segona sessió
-
-* Persistència de les dades:
-  * Muntatge carpetes locals
-  * Volums:
-    * Tipus de volums
-    * Diferències entre `docker run --mount` i `docker run -v`
-
-* Exemples entorns d'execució:
-  * Usant SQL Server a un contenidor
-  * Usant MySQL a un contenidor
-  * Exemple codi Java amb remote development
-
-* Arxiu Dockerfile
-  * Creant imatge aplicació web
-  * Bones pràctiques instal·lació durant creació
-  * Etiquetat
-  * Crear aplicació Java contenidor
-  * Crear aplicació Java multistage
-
-* Crear imatge a partir d'un contenidor
-  * docker commit
-
-* Treballant amb registres de contenidors
-  * Docker Hub
-  * Altres alternatives: Azure Container Registry
-  * Etiquetes: `docker tag` versionatge i *latest*
-
-## Tercera sessió
-
-* Xarxes en docker
-  * Tipus de xarxes
-  * Exemples
-
-* Docker-compose
-  * Solució amb un sol contenidor
-  * Desplegant solucions amb múltiples contenidors
-
-* Empaquetant aplicacions amb Docker
-  * Empaquetant aplicacions PHP
-
-* Orquestració de contenidors
-  * Docker Swarm
-  * Kubernetes
-
-* Desplegant contenidors al cloud
-  * Azure
-  * AWS
+1.[Volum muntat](01.VolumMuntat/)
+1.[Ús de volums](02.Volums/)
+1.[MySQL](03.MySQL/)
+1.[SQL Server](04.SQL_Server/)
+1.[Dockerfike](05.Dockerfile/)
+1.[Codi Java](06.Codi_Java/)
+1.[Dockerfile install](07.Dockerfile_install/)
+1.[Dockerfile multi-stage](08.Dockerfile_multistage/)
+1.[Docker Compose un servei](09.DockerCompose1/)
+1.[Docker Compose multiservei](10.DockerCompose2/)
+1.[Docker init](11.Docker_init/)
+1.[Docker Secrets](12.Docker_Secrets/)
+1.[Docker Compose: Jupyter Notebook](13.jupyter-docker-compose/)
 
 ## Recursos i links interessants
 
-* Tutorials i cursos
-  * [Docker Docs](https://docs.docker.com)
-  * [Learn Docker in a Month of Lunches](https://diamol.net)
-  * [Docker Compose Tutorial: advanced Docker made simple](https://www.educative.io/blog/docker-compose-tutorial)
-  * [Tutorial bàsic Docker Raspberri PI](https://blog.330ohms.com/2022/07/30/tutorial-basico-para-usar-docker-en-tu-raspberry-pi/)
-* Curiositats
-  * [WebAssembly: Docker without containers!](https://wasmlabs.dev/articles/docker-without-containers/)
-  * [The Complete Guide to Docker Secrets](https://earthly.dev/blog/docker-secrets/)
-  * [Introducción a Kubernetes para principiantes](https://geekflare.com/es/kubernetes-introduction/)
+- Tutorials i cursos
+  - [Docker Docs](https://docs.docker.com)
+  - [Learn Docker in a Month of Lunches](https://diamol.net)
+  - [Docker Compose Tutorial: advanced Docker made simple](https://www.educative.io/blog/docker-compose-tutorial)
+  - [Tutorial bàsic Docker Raspberri PI](https://blog.330ohms.com/2022/07/30/tutorial-basico-para-usar-docker-en-tu-raspberry-pi/)
+- Curiositats
+  - [WebAssembly: Docker without containers!](https://wasmlabs.dev/articles/docker-without-containers/)
+  - [The Complete Guide to Docker Secrets](https://earthly.dev/blog/docker-secrets/)
+  - [Introducción a Kubernetes para principiantes](https://geekflare.com/es/kubernetes-introduction/)
