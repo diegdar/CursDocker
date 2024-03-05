@@ -13,18 +13,30 @@
 ## Exemples
 
 1.[Volum muntat](01.VolumMuntat/)
-1.[Ús de volums](02.Volums/)
-1.[MySQL](03.MySQL/)
-1.[SQL Server](04.SQL_Server/)
-1.[Dockerfike](05.Dockerfile/)
-1.[Codi Java](06.Codi_Java/)
-1.[Dockerfile install](07.Dockerfile_install/)
-1.[Dockerfile multi-stage](08.Dockerfile_multistage/)
-1.[Docker Compose un servei](09.DockerCompose1/)
-1.[Docker Compose multiservei](10.DockerCompose2/)
-1.[Docker init](11.Docker_init/)
-1.[Docker Secrets](12.Docker_Secrets/)
-1.[Docker Compose: Jupyter Notebook](13.jupyter-docker-compose/)
+
+2.[Ús de volums](02.Volums/)
+
+3.[MySQL](03.MySQL/)
+
+4.[SQL Server](04.SQL_Server/)
+
+5.[Dockerfike](05.Dockerfile/)
+
+6.[Codi Java](06.Codi_Java/)
+
+7.[Dockerfile install](07.Dockerfile_install/)
+
+8.[Dockerfile multi-stage](08.Dockerfile_multistage/)
+
+9.[Docker Compose un servei](09.DockerCompose1/)
+
+10.[Docker Compose multiservei](10.DockerCompose2/)
+
+11.[Docker init](11.Docker_init/)
+
+12.[Docker Secrets](12.Docker_Secrets/)
+
+13.[Docker Compose: Jupyter Notebook](13.jupyter-docker-compose/)
 
 ## Recursos i links interessants
 
