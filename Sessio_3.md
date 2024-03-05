@@ -1,5 +1,11 @@
 # Tercera sessió
 
+-[Xarxes a Docker](#xarxes-a-docker)
+-[Docker Compose](#docker-compose)
+-[Docker init](#docker-init)
+-[Orquestració](#orquestració)
+-[Desplegament](#desplegament)
+  
 ## Xarxes a Docker
 
 Una de les coses que cal tenir en compte quan despleguem una aplicació amb Docker, és com es comuniquen els contenidors entre ells. Per defecte, Docker crea una xarxa per defecte anomenada `bridge` i tots els contenidors que es creen, es connecten a aquesta xarxa. A més els contenidors s'identifiquen per nom com si tinguessim un servei de DNS.

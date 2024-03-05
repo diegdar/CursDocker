@@ -1,5 +1,13 @@
 # Primera sessió
 
+-[Introducció](#introducció)
+-[Instal·lació](#installació)
+-[Creant contenidors](#creant-contenidors)
+-[Gestionant contenidors](#gestionant-contenidors)
+-[Imatges](#imatges)
+-[Per practicar online](#per-practicar-online)
+-[Eines i utilitats](#eines-i-utilitats)
+
 ## Introducció
 
 Docker és una plataforma que permet als desenvolupadors crear, desplegar i executar aplicacions fàcilment en contenidors. Els contenidors són entorns lleugers, portàtils i autònoms que es poden executar en qualsevol màquina amb Docker instal·lat. Això fa que sigui fàcil desenvolupar i desplegar aplicacions en diferents entorns, sense preocupar-se per les dependències o problemes de compatibilitat.
@@ -238,7 +246,7 @@ Si volem veure els logs d'un contenidor, podem utilitzar la comanda `logs`:
 docker logs webserver
 ```
 
-## Informació dels contenidors
+### Informació dels contenidors
 
 Si volem veure informació detallada d'un contenidor, podem utilitzar la comanda `inspect`:
 
