@@ -1,8 +1,8 @@
 # Segona sessió
 
--[Persistència de les dades](#persistència-de-les-dades)
--[Entorns de desenvolupament](#entorns-de-desenvolupament)
--[Creació d'imatges](#creació-imatges)
+- [Persistència de les dades](#persistència-de-les-dades)
+- [Entorns de desenvolupament](#entorns-de-desenvolupament)
+- [Creació d'imatges](#creació-imatges)
 
 ## Persistència de les dades
 

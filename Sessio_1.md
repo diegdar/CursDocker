@@ -1,12 +1,12 @@
 # Primera sessió
 
--[Introducció](#introducció)
--[Instal·lació](#installació)
--[Creant contenidors](#creant-contenidors)
--[Gestionant contenidors](#gestionant-contenidors)
--[Imatges](#imatges)
--[Per practicar online](#per-practicar-online)
--[Eines i utilitats](#eines-i-utilitats)
+- [Introducció](#introducció)
+- [Instal·lació](#installació)
+- [Creant contenidors](#creant-contenidors)
+- [Gestionant contenidors](#gestionant-contenidors)
+- [Imatges](#imatges)
+- [Per practicar online](#per-practicar-online)
+- [Eines i utilitats](#eines-i-utilitats)
 
 ## Introducció
 

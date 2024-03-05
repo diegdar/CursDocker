@@ -1,6 +1,6 @@
 # Tercera sessió
 
-- [Xarxes a Docker](#xarxes-a-docker)
+- [Xarxes a Docker](#xarxes-a-docker
 - [Docker Compose](#docker-compose)
 - [Docker init](#docker-init)
 - [Orquestració](#orquestració)
