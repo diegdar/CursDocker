@@ -14,7 +14,7 @@ Docker és una plataforma que permet als desenvolupadors crear, desplegar i exec
 
 Si ho comparem amb una màquina virtual, un contenidor comparteix el SO, s'executa com un procés aïllat en l'espai d'usuari i pot iniciar-se en mil·lisegons. A més, els contenidors ocupen menys espai que les màquines virtuals, ja que no necessiten un sistema operatiu complet.
 
-![Contenidors vs VM](/images/docker/vm_vs_container.png)
+![Contenidors vs VM](images/vm_vs_container.png)
 
 Docker es pot utilitzar en els equips clients per tal de disposar d'entorns de desenvolupament lleugers i portàtils, i també en els servidors per desplegar aplicacions de forma ràpida i escalable.
 
@@ -289,7 +289,7 @@ docker.io/library/alpine:latest
 
 Hem vist com baixar imatges, però d'on es baixen i com sabem quin nom té la imatge? La resposta és que es baixen del registre que configureu, que per defecte és l'oficial de Docker, [Docker Hub](https://hub.docker.com). Aquest registre és públic i gratuït, però també es poden crear registres privats (opcions de pagament).
 
-![Docker Hub](/images/docker/docker-hub.png)
+![Docker Hub](images/docker-hub.png)
 
 Podem explorar la pàgina del Hub per cercar les imatges que necessitem. Aquí cal tenir en compte que podem tenir diversos tipus d'imatges:
 
