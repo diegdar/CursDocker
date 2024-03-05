@@ -267,6 +267,12 @@ Les instruccions que podem trobar en un arxiu `Dockerfile` són les següents:
 - `VOLUME`: indica un directori que es vol compartir amb altres contenidors.
 - `EXPOSE`: indica el port que s'ha d'exposar. Aquests ports són els que es poden mapejar amb la comanda `docker run -P`.
 
+### .dockerignore
+
+Aquest arxiu ens permet indicar quins arxius o carpetes no volem que es copiïn a la imatge. Això és útil perquè ens permet reduir el tamany de la imatge i millorar la seguretat.
+
+Per exemple, si tenim un arxiu `.git` a la carpeta de l'aplicació, no volem que aquest arxiu es copiï a la imatge, per tant, caldrà afegir aquest arxiu a l'arxiu `.dockerignore`.
+
 ### Creació d'imatges. Comandes
 
 Per crear una imatge a partir d'un arxiu `Dockerfile`, caldrà executar la comanda `docker build`. Aquesta comanda té la següent sintaxi:
