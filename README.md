@@ -54,10 +54,11 @@
 
 * Crear imatge a partir d'un contenidor
   * docker commit
-      
+
 * Treballant amb registres de contenidors
   * Docker Hub
   * Altres alternatives: Azure Container Registry
+  * Etiquetes: `docker tag` versionatge i *latest*
 
 ## Tercera sessió
 
