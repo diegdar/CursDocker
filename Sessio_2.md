@@ -351,7 +351,7 @@ I ara ja podem crear una imatge capaç d'executar-se a la arquitectura `linux/am
 
 Amb aquesta ordre es construeix la imatge multiplataforma i es puja a Docker Hub.
 
-Com a novetat, les darreres actualitzacions de Docker incloen la possibilitat d'usar `containerd` com a motor d'execució. Aquesta opció permetrà que les imatges multiplataforma es puguin executar en qualsevol arquitectura, independentment de la que s'hagi utilitzat per crear la imatge.
+Com a novetat, les darreres actualitzacions de Docker incloen la possibilitat d'usar `containerd` com a motor d'execució. Aquesta opció permetrà que les imatges multiplataforma es puguin executar en qualsevol arquitectura, independentment de la que s'hagi utilitzat per crear la imatge. [Informació imatges containerd](https://docs.docker.com/desktop/containerd/)
 
 ### Etiquetat: versionatge i latest
 
