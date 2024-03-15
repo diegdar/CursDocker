@@ -273,9 +273,9 @@ Les instruccions que podem trobar en un arxiu `Dockerfile` són les següents:
 
 ### .dockerignore
 
-Aquest arxiu ens permet indicar quins arxius o carpetes no volem que es copiïn a la imatge. Això és útil perquè ens permet reduir el tamany de la imatge i millorar la seguretat.
+A més de l'arxiu `Dockerfile`, també podem tenir un arxiu anomenat `.dockerignore`. Aquest arxiu és similar a l'arxiu `.gitignore` i serveix per indicar quins fitxers o directoris no volem que es copiïn a la imatge. Aquest arxiu és molt útil per no copiar fitxers que no són necessaris a la imatge, com per exemple, fitxers de log, fitxers temporals, etc.
 
-Per exemple, si tenim un arxiu `.git` a la carpeta de l'aplicació, no volem que aquest arxiu es copiï a la imatge, per tant, caldrà afegir aquest arxiu a l'arxiu `.dockerignore`.
+Per exemple, si volem que no es copiïn els fitxers de log, s'haurà afegir la línia `*.log` a l'arxiu `.dockerignore`. De la mateixa manera si volem assegura que la carpeta .git no s'inclogui a la imatge, només caldrà incloure la línia `.git` a l'esmentat `.dockerignore`.
 
 ### Creació d'imatges. Comandes
 
@@ -353,6 +353,12 @@ Amb aquesta ordre es construeix la imatge multiplataforma i es puja a Docker Hub
 
 Com a novetat, les darreres actualitzacions de Docker incloen la possibilitat d'usar `containerd` com a motor d'execució. Aquesta opció permetrà que les imatges multiplataforma es puguin executar en qualsevol arquitectura, independentment de la que s'hagi utilitzat per crear la imatge. [Informació imatges containerd](https://docs.docker.com/desktop/containerd/)
 
+![containerd](images/containerd.png)
+
+```bash
+ docker build --platform=linux/amd64,linux/arm64  -t calonso6/2048-containerd:1.0 .
+```
+
 ### Etiquetat: versionatge i latest
 
 Si no s'indica cap etiqueta, Docker *etiqueta* la versió com *latest* i òbviamenet, només ens deixarà tenir una imatge associada al nom. Per etiquetar una imatge, farem servir la comanda `docker tag`:
@@ -376,5 +382,25 @@ Les imatges multietapa ens permeten crear imatges que continguin només el neces
 Aquesta tècnica és molt útil per a aplicacions que es compilen, com per exemple, aplicacions Java, Go, etc.
 
 A l'exemple que veurem a continuació, crearem una imatge que contindrà una aplicació Java.
+
+```Dockerfile
+# Imatge base
+FROM openjdk:latest as builder
+# Copiem el codi font
+COPY . /usr/src/myapp
+# Establim el directori de treball
+WORKDIR /usr/src/myapp
+# Compilació
+RUN javac Main.java
+
+# Imatge final
+FROM openjdk:latest
+# Copiem el fitxer compilat
+COPY --from=builder /usr/src/myapp/Main.class /usr/src/myapp
+# Establim el directori de treball
+WORKDIR /usr/src/myapp
+# Execució
+CMD ["java", "Main"]
+```
 
 [Tornar a l'índex](README.md)
