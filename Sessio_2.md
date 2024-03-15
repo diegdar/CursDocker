@@ -293,7 +293,7 @@ docker build -t webapp:1.0 .
 
 Aquesta comanda crearà una imatge a partir de l'arxiu `Dockerfile` que es troba al directori actual. Si l'arxiu `Dockerfile` es troba en un altre directori, caldrà indicar la ruta correcta.
 
-![docker build](img/dockerfile.png)
+![docker build](images/dockerfile.png)
 
 ### Creació a partir d'un contenidor
 
