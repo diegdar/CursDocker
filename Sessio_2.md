@@ -117,7 +117,13 @@ Un aspecte molt important a tenir en compte és que a source o src per abreujar,
 docker run -d -p 8080:80 --mount type=bind,target=/usr/share/nginx/html,source=${PWD} nginx
 ```
 
-Una cosa a tenir en compte, és que si usem l'opció `mount` la destinació ha d'existir, sinó al crear el contenidor, ens donarà un error. En canvi, si utilitzem l'opció `volume`, la destinació es crearà automàticament.
+Amb el format antic clàssic, la comanda seria:
+
+```powershell
+docker run -d -p 8080:80 -v ${PWD}:/usr/share/nginx/html nginx
+```
+
+Una cosa a tenir en compte, és que si usem l'opció `mount` la destinació ha d'existir, sinó al crear el contenidor, ens donarà un error. En canvi, si utilitzem l'opció `-v`, la destinació es crearà automàticament.
 
 ### Volums de tipus tmpfs
 
