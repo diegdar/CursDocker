@@ -216,6 +216,22 @@ Un cop tenim les nostres aplicacions empaquetades en contenidors, el següent pa
 
 - Desplegament a serveis de cloud. Molts serveis de cloud disposen de serveis de contenidors que ens permeten desplegar les nostres aplicacions de forma senzilla.
 
+![Desplegament](images/DockerDeploy.png)
+
+### Desplegament on-premises
+
+Els contenidors de Docker es poden desplegar fàcilment a un servidor dedicat. Per posar en funcionament Docker al servidor cal seguir les següents passes:
+
+- Instal·lar el motor Docker (Docker Engine).
+- Disposar de les imatges necessàries (pròpies i les genèriques).
+- Utilitzar les imatges per activar contenidors.
+- Configurar xarxa, volums.
+- Configurar el tallafocs per permetre l'accés als ports necessaris.
+
+Si voleu simplificar encara més el procés de desplegament, podeu utilitzar Docker Compose, de la mateixa manera que s'ha fet a l'entorn local de desenvolupament.
+
+Si la solució es prou complexa una bona alternativa pot ser utilitzar Docker Swarm, que és una eina que permet gestionar un clúster de contenidors de Docker. Aquesta eina permet gestionar els contenidors de forma més senzilla i també permet gestionar-los de forma més autònoma.
+
 ### Desplegament al cloud
 
 Podem desplegar les nostres imatges directament a serveis com:
@@ -225,9 +241,13 @@ Podem desplegar les nostres imatges directament a serveis com:
 - Google Cloud
 - Azure
 
-Aquests desplegaments tant es poden fer per entorns senzills com per clústers de Kubernetes.
+Aquests desplegaments es poden fer de tres formes diferents:
 
-Exemple de desplegament a Azure com alternativa a desplegar codi en una aplicació web:
+**IaaSS**: Infraestructura com a servei, on despleguem les nostres màquines virtuals i després despleguem les nostres imatges de Docker. D'aquesta manera es realitza una gestió similar a si ho fem a un servidor dedicat, però amb la flexibilitat que ens dona el cloud: escalat, manteniment, etc.
+
+**PaaS**: Plataforma com a servei, on ens oblidem de les configuracions de la màquina virtual de base i directament despleguem les nostres imatges.
+
+Exemple de desplegament PaaS a Azure com alternativa a desplegar codi en una aplicació web:
 
 En el primer pas seleccionem el servei App Service per desplegar l'aplicació, indicant que desplegarem a partir d'una imatge de Docker:
 
@@ -242,5 +262,7 @@ Un cop configurat, l'aplicació es desplegarà i estarà disponible a la URL que
 ![Azure-3](images/azure03.png)
 
 ![Azure-4](images/azure04.png)
+
+**CaaS**: aquest tercer model (Container as a Service) incorpora una capa d'abstracció més, que proporciona específicament una plataforma per executar i gestionar aplicacions containeritzades. Està dissenyat per facilitar la seva gestió, gestió i escala de contenidors i microserveis al núvol. En aquest model, Kubernetes és l'eina més utilitzada.
 
 [Tornar a l'índex](README.md)
