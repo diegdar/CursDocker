@@ -1,6 +1,6 @@
 # Tercera sessió
 
-- [Xarxes a Docker](#xarxes-a-docker
+- [Xarxes a Docker](#xarxes-a-docker)
 - [Docker Compose](#docker-compose)
 - [Docker init](#docker-init)
 - [Orquestració](#orquestració)
@@ -20,7 +20,7 @@ docker network create --driver bridge mynetwork
 
 Existeixen cinc tipus de xarxes: `bridge`, `host`, `macvlan`, `ipvlan`, `overlay` i `none`:
 
-- La xarxa `bridge` és la que hem vist abans i es comporta com la xarxa NAT dels virtualitadors.
+- La xarxa `bridge` és la que hem vist abans i es comporta com la xarxa NAT dels virtualitzadors.
 - La xarxa `host` fa que el contenidor comparteixi la xarxa amb el host, sense cap aïllament, és a dir, el contenidor es comporta com si fos una aplicació més del host. Aquest mode només funciona amb Linux.
 - La xarxa `macvlan` fa que el contenidor tingui una adreça MAC pròpia i es comporti com un dispositiu físic. Aquest mode de xarxa és molt útil per a aplicacions que necessiten una adreça MAC pròpia, per exemple aplicacions que fan accés directe a la xarxa (habitualment codi antic). Aquest mode també funciona únicament amb Linux.
 - Xarxa 'ipvlan' fa que el contenidor tingui una adreça IP pròpia i es comporti com un dispositiu físic. Aquest mode de xarxa és molt útil per a aplicacions que necessiten una adreça IP pròpia, com per exemple, aplicacions que necessiten multicast. Aquest tipus de xarxa funcinoa amb Linux i amb Windows (únicament contenidors Windows).
