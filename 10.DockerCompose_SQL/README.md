@@ -12,12 +12,8 @@ networks:
     driver: bridge
 
 volumes:
-  sql-server-data:
-    driver: local
-  sqldata:
-  sqllog:
-  sqlbackup:
-
+  sql-data:
+    
 services:
   db:
     image: mcr.microsoft.com/mssql/server
@@ -31,8 +27,6 @@ services:
     ports:
       - '1433:1433'
     volumes:
-      - sql-server-data:/var/opt/mssql/
-      - sqldata:/var/opt/sqlserver/data
-      - sqllog:/var/opt/sqlserver/log
-      - sqlbackup:/var/opt/sqlserver/backup
+      - sql-data:/var/opt/mssql
+      
 ```

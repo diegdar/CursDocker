@@ -64,12 +64,13 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./web:/usr/share/nginx/html
-volumes:
-  web:
+      - type: bind
+      source: ./web
+      target: /usr/share/nginx/html
+      read_only: true
 ```
 
-En aquest arxiu estem definint un contenidor anomenat `webserver` que utilitza la imatge `nginx` i que mapeja el port 80 del contenidor al port 8080 de l'equip host. A més, estem creant un volum anomenat `web` que es mapeja amb la carpeta `web` de l'equip host.
+En aquest arxiu estem definint un contenidor anomenat `webserver` que utilitza la imatge `nginx` i que mapeja el port 80 del contenidor al port 8080 de l'equip host. A més, estem creant un volum que es mapeja  la carpeta `web` de l'equip host a la carpeta `/usr/share/nginx/html` del contenidor. és de només lectura, és a dir, que des del contenidor no es pot modificar el contingut.
 
 Per arrancar l'entorn, només cal que executem la comanda `docker compose up`:
 
@@ -77,16 +78,23 @@ Per arrancar l'entorn, només cal que executem la comanda `docker compose up`:
 docker compose up -d
 ```
 
-Això crearà el contenidor i el volum i el posarà en execució. Si volem aturar l'entorn, només cal que executem la comanda `docker-compose down`:
+Si executem la comanda `docker ps`, veurem que tenim un contenidor en execució.
+
+```powershell
+docker ps --format "table {{.Ports}}\t{{.Names}}"
+```
+
+El resultat serà:
+
+```powershell
+PORTS                  NAMES
+0.0.0.0:8080->80/tcp   09dockercompose_nginx_webserver_1
+```
+
+Si volem aturar l'entorn, només cal que executem la comanda `docker-compose down`:
 
 ```powershell
 docker compose down
-```
-
-Això elimina el contenidor però no el volum (persistència). Si volem eliminar també els volums per esborrar totes les dades:
-  
-  ```powershell
-docker compose down -v
 ```
 
 Un segon exemple, és veure com podem simplificar la creació d'un contenidor amb una SQL server. Gràcies al composer, podem escriure de forma molt més senzilla les variables de configuració:
@@ -99,11 +107,7 @@ networks:
     driver: bridge
 
 volumes:
-  sql-server-data:
-    driver: local
-  sqldata: {}
-  sqllog: {}
-  sqlbackup: {}
+  sql-data
 services:
   db:
     image: mcr.microsoft.com/mssql/server
@@ -117,10 +121,13 @@ services:
     ports:
       - '1433:1433'
     volumes:
-      - sql-server-data:/var/opt/mssql/
-      - sqldata:/var/opt/sqlserver/data
-      - sqllog:/var/opt/sqlserver/log
-      - sqlbackup:/var/opt/sqlserver/backup
+      - sql--data:/opt/mssql/
+```
+
+Quan aturem el contenidor, les dades es mantenen en els volums que hem creat. Si volem eliminar també els volums:
+
+```powershell
+docker compose down -v
 ```
 
 Un altre exemple més complex, amb un contenidor amb el servidor web i un altre amb la base de dades:
