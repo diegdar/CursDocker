@@ -327,6 +327,26 @@ També podem enviar la imatge des de Docker Desktop, fent clic a la imatge i sel
 
 Una tercera opció, és utilitzar Visual Studio Code, que ens permet enviar la imatge a un registre amb un sol clic.
 
+### Registres alternatius: GitHub Container Registry
+
+A més de Docker Hub podem fer servir altres registres com GitHub Container Registry, Amazon Elastic Container Registry, Google Container Registry, etc. o fins i tot, crear un de propi.
+
+Veurem com utilitzar GitHub Container Registry, té l'avantatge que ens permet tenir imatges privades, a diferència de Docker Hub que només permet tenir imatges públiques amb el pla gratuït.
+
+El primer pas, serà crear un token d'accés a GitHub. Per fer-ho, caldrà anar a la configuració del compte de GitHub, seleccionar `Developer settings` i `Personal access tokens`. Un cop creat el token, caldrà copiar-lo i guardar-lo en un lloc segur, ja que no es podrà veure més.
+
+![Creació Token GitHub](images/ghcr-1.png)
+
+Per usar-lo a Visual Code, caldrà anar a la configuració de Docker i afegir el token a la secció `Registries` i donar a l'opció `Connect Registry`. Això permetrà que Visual Code pugui pujar les imatges a GitHub Container Registry. Ens sol·licitarà el nom d'usuari de GitHub i a continuació el token que hem creat.
+
+![Configuració GHCR a Visual Code](images/ghcr-2.png)
+
+Si ho volem fer des de la línia de comandes, caldrà fer servir la comanda `docker login`:
+
+```bash
+docker login ghcr.io -u USERNAME -p TOKEN
+```
+
 ### Imatges multiplataforma
 
 Les imatges de Docker es poden crear per a diferents arquitectures. Això és molt útil perquè ens permet crear imatges que es puguin executar en diferents arquitectures, com per exemple, en arquitectures ARM o en arquitectures x86.
