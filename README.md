@@ -28,15 +28,19 @@
 
 8.[Dockerfile multi-stage](08.Dockerfile_multistage/)
 
-9.[Docker Compose un servei](09.DockerCompose1/)
+9.[Docker Compose un servei](09.DockerCompose_Nginx/)
 
-10.[Docker Compose multiservei](10.DockerCompose2/)
+10.[Docker Compose SQL](10.DockerCompose_SQL/)
 
-11.[Docker init](11.Docker_init/)
+11.[Docker Compose SQL amb build](11.DockerCompose_SQL_build/)
 
-12.[Docker Secrets](12.Docker_Secrets/)
+12.[Docker Compose multiservei](12.DockerCompose_WordPress/)
 
 13.[Docker Compose: Jupyter Notebook](13.jupyter-docker-compose/)
+
+14.[Docker init](14.Docker_init/)
+
+15.[Docker Secrets](15.Docker_Secrets/)
 
 ## Recursos i links interessants
 
