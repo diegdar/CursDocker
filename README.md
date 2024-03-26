@@ -38,11 +38,9 @@
 
 13.[Docker Compose: Jupyter Notebook](13.jupyter-docker-compose/)
 
-14.[Docker Compose amb diferents entorns](14.ComposeEntorns/)
+14.[Docker init](14.Docker_init/)
 
-15.[Docker init](14.Docker_init/)
-
-16.[Docker Secrets](15.Docker_Secrets/)
+15.[Docker Secrets](15.Docker_Secrets/)
 
 ## Recursos i links interessants
 
