@@ -1,10 +1,10 @@
 # Docker Compose amb un sol contenidor
 
-Docker compose simplifica la creació de contenidors al permetre configurar de forma senzilla paràmetres i variables d'entorn.
+En aquest exemple, es crea un servei a partir d'una imatge personalitzada (Dockerfile) per solucionar el problema dels permisos a les carpetes de SQL Server.
 
 Exemple amb SQL Server:
 
-```docker-compose.yml
+```yaml
 version: '3.9'
 
 networks:
@@ -12,12 +12,14 @@ networks:
     driver: bridge
 
 volumes:
-  sql-data:
-    
+  sqlvolume:
+  sqldata:
+  sqllog:
+  sqlbackup:
 services:
   db:
-    image: mcr.microsoft.com/mssql/server
-    container_name: db-sqlserver
+    build:
+      dockerfile: ./Dockerfile
     networks:
       - app-network-public
     restart: always
@@ -27,6 +29,9 @@ services:
     ports:
       - '1433:1433'
     volumes:
-      - sql-data:/var/opt/mssql
+      - sqlvolume:/var/opt/mssql/
+      - sqldata:/var/opt/sqlserver/data
+      - sqllog:/var/opt/sqlserver/log
+      - sqlbackup:/var/opt/sqlserver/backup
       
 ```
