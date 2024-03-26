@@ -40,10 +40,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-    webdata:/usr/share/nginx/html
-volume:
-  webdata:
-```
+  ```
 
 Per desplegar el servei en mode producció, executem:
 
