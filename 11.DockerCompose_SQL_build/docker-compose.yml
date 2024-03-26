@@ -11,9 +11,8 @@ volumes:
   sqlbackup:
 services:
   db:
-    image: mcr.microsoft.com/mssql/server
-    container_name: db-sqlserver
-    #user: root
+    build:
+      dockerfile: ./Dockerfile
     networks:
       - app-network-public
     restart: always
