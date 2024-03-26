@@ -17,8 +17,7 @@
 </script>
 
 <?php
-echo "<h1>Hora del sistema:</h1>";
-echo gethostname();
-echo 
+echo "<h1>Hora del sistema</h1>";
+echo
 '<span id="hora">0</span>:<span id="minuts">0</span>:<span id="segons">0</span>';
 ?>
