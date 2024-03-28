@@ -278,6 +278,6 @@ Un cop configurat, l'aplicació es desplegarà i estarà disponible a la URL que
 
 ![Azure-4](images/azure04.png)
 
-**CaaS**: aquest tercer model (Container as a Service) incorpora una capa d'abstracció més, que proporciona específicament una plataforma per executar i gestionar aplicacions containeritzades. Està dissenyat per facilitar la seva gestió, gestió i escala de contenidors i microserveis al núvol. En aquest model, Kubernetes és l'eina més utilitzada, tot i que també hi ha opcions per desplegar contenidors de forma individual com Azure Container Instances o AWS Fargate.
+**CaaS**: aquest tercer model (Container as a Service) incorpora una capa d'abstracció més, que proporciona específicament una plataforma per executar i gestionar aplicacions containeritzades. Està dissenyat per facilitar la seva gestió, gestió i escala de contenidors i microserveis al núvol. En aquest model, Kubernetes és l'eina més utilitzada, tot i que també hi ha opcions per desplegar contenidors de forma individual com [Azure Container Instances](https://azure.microsoft.com/es-es/products/container-instances) o [AWS LightSail](https://lightsail.aws.amazon.com/ls/webapp/create/container-service?region=eu-west-1).
 
 [Tornar a l'índex](README.md)
