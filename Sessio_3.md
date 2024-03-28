@@ -43,12 +43,20 @@ Docker Compose és una eina que permet gestionar contenidors de forma declarativ
 
 Per crear un entorn de Docker Compose, haurem d'utilitzar un fitxer de configuració anomenat `docker-compose.yml` o `compose.yml`. Aquest arxiu definirà els diversos contenidors implicats, així com altres aspectes com són les xarxes, els volums, les variables d'entorn, etc.
 
-Les comandes de docker compose són les següents:
+Les principas comandes de docker compose són les següents:
 
 - `docker compose up`: crea i aixeca els serveis que es troben a l'arxiu `docker-compose.yaml`.
 - `docker compose down`: atura i elimina els serveis que es troben a l'arxiu `docker-compose.yaml`.
 - `docker compose build`: construeix els serveis que es troben a l'arxiu `docker-compose.yaml`.
 - `docker compose push`: envia les imatges dels serveis que es troben a l'arxiu `docker-compose.yaml` a un registre de Docker Hub o a un altre registre.
+- `docker compose pull`: descarrega les imatges dels serveis que es troben a l'arxiu `docker-compose.yaml` d'un registre de Docker Hub o d'un altre registre.
+- `docker compose run`: executa una comanda en un servei que es troba a l'arxiu `docker-compose.yaml`.
+- `docker compose ps`: mostra l'estat dels serveis que es troben a l'arxiu `docker-compose.yaml`.
+- `docker compose logs`: mostra els logs dels serveis que es troben a l'arxiu `docker-compose.yaml`.
+- `docker compose exec`: executa una comanda en un contenidor que es troba a l'arxiu `docker-compose.yaml`.
+- `docker compose restart`: reinicia els serveis que es troben a l'arxiu `docker-compose.yaml`.
+
+En aquest [link](https://devhints.io/docker-compose) trobareu una guia de les comandes de Docker Compose.
 
 A més, podem fer comandes com `docker compose up --build -d` per aixecar els serveis en mode detachat i construir-los si la imatge no existeix o s'ha d'actualtizar amb canvis.
 
@@ -270,6 +278,6 @@ Un cop configurat, l'aplicació es desplegarà i estarà disponible a la URL que
 
 ![Azure-4](images/azure04.png)
 
-**CaaS**: aquest tercer model (Container as a Service) incorpora una capa d'abstracció més, que proporciona específicament una plataforma per executar i gestionar aplicacions containeritzades. Està dissenyat per facilitar la seva gestió, gestió i escala de contenidors i microserveis al núvol. En aquest model, Kubernetes és l'eina més utilitzada.
+**CaaS**: aquest tercer model (Container as a Service) incorpora una capa d'abstracció més, que proporciona específicament una plataforma per executar i gestionar aplicacions containeritzades. Està dissenyat per facilitar la seva gestió, gestió i escala de contenidors i microserveis al núvol. En aquest model, Kubernetes és l'eina més utilitzada, tot i que també hi ha opcions per desplegar contenidors de forma individual com Azure Container Instances o AWS Fargate.
 
 [Tornar a l'índex](README.md)
