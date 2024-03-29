@@ -37,6 +37,7 @@ version: "3.9"
 services:
   webserver:
     build: .
+    image: calonso6/web-basic
     ports:
       - "8080:80"
     volumes:
@@ -55,3 +56,5 @@ Si volem assegurar que cada cop que despleguem el servei, es construeixi la imat
 ```bash
 docker-compose -f compose-prod.yaml up -d --build
 ```
+
+Podem comprovar, com es crea una imatge amb el nom seleccionat, enlloc del nom per defecte.
