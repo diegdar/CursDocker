@@ -2,5 +2,8 @@ version: "3.9"
 services:
   webserver:
     build: .
+    # Definim el nom de la imatge enlloc del nom que agafaria
+    # per defecte
+    image: calonso6/web-basic:1.0
     ports:
       - "8080:80"
