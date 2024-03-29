@@ -9,6 +9,7 @@ services:
     image: nginx
     ports:
       - "8080:80"
+    # - "80" Publica el port 80 a un port aleatori del host  
     volumes:
       - type: bind
         source: ./web
