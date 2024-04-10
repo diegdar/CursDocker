@@ -18,7 +18,7 @@ Si ho comparem amb una màquina virtual, un contenidor comparteix el SO, s'execu
 
 Docker es pot utilitzar en els equips clients per tal de disposar d'entorns de desenvolupament lleugers i portàtils, i també en els servidors per desplegar aplicacions de forma ràpida i escalable.
 
-L'arquitectura de Docker es basa en `Docker Engine` que és el CLI amb el que interactua l'usuari. `containerd` que gestiona el cicle de vida complet dels contenidors que s'executen en el sistema. El `dockershim` permet comunicar amb`runc` que és l'encarregat d'executar els contenidors. Com a novetat, Docker ara incorpora `wasm-shim` que permet executar contenidors en WebAssembly.
+L'arquitectura de Docker es basa en `Docker Engine` que és el CLI amb el que interactua l'usuari. L'altre component, `containerd` gestiona el cicle de vida complet dels contenidors que s'executen en el sistema. Per defecte, `runc` és el runtime que s'utilitza per executar-los, però a les darreres versions (encara en mode experimental), hi ha la possibilitat d'usar com a runtime `wasmtime`, que permet executar contenidors que utilitzin WebAssembly. El mecanisme de comunicació entre `containerd` i els runtime és a través de `containerd-shim`, que és un procés intermediari que permet gestionar els contenidors de forma més eficient.
 
 ![Arquitectura Docker](images/docker_arch.png)
 
