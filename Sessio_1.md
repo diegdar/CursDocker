@@ -18,6 +18,10 @@ Si ho comparem amb una màquina virtual, un contenidor comparteix el SO, s'execu
 
 Docker es pot utilitzar en els equips clients per tal de disposar d'entorns de desenvolupament lleugers i portàtils, i també en els servidors per desplegar aplicacions de forma ràpida i escalable.
 
+L'arquitectura de Docker es basa en `Docker Engine` que és el CLI amb el que interactua l'usuari. `containerd` que gestiona el cicle de vida complet dels contenidors que s'executen en el sistema. El `dockershim` permet comunicar amb`runc` que és l'encarregat d'executar els contenidors. Com a novetat, Docker ara incorpora `wasm-shim` que permet executar contenidors en WebAssembly.
+
+![Arquitectura Docker](images/docker_arch.png)
+
 Les imatges que són les plantilles que permeten executar contenidors es poden obtenir dels registres, el propi de Docker és Docker Hub [link](https://hub.docker.com/), però també n'hi ha d'altres com GitHub Packets o fins i tot crear un per la nostra organització.
 
 Docker es pot utilitzar tant en entorns Windows, macOS i Linux i fins i tot en Raspberry Pi. Ara, els contenidors creats només poden ser Linux o Windows, aquest últims només es poden executar en màquines Windows. De fet, la immensa majoria de contenidors que trobarem són Linux.
