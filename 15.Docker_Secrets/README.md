@@ -2,9 +2,34 @@
 
 Un secret és qualsevol dada, com ara una contrasenya, un certificat o una clau API, que no s’ha de transmetre a través d’una xarxa ni emmagatzemar-les sense xifrar en un Dockerfile o en el codi font de la vostra aplicació.
 
-Docker Compose us proporciona una manera d’utilitzar secrets sense haver d’utilitzar variables d’entorn per emmagatzemar informació. Si injecteu contrasenyes i claus API com a variables d’entorn, podeu arriscar una exposició involuntària a la informació. Les variables de medi ambient solen estar disponibles per a tots els processos i pot ser difícil fer un seguiment de l’accés. També es poden imprimir en registres quan es debutin errors sense el vostre coneixement. L’ús de secrets mitiga aquests riscos.
+Els serveis només poden accedir als secrets quan, explícitament, se'ls ha concedit mitjançant un atribut de secrets dins de l'element de nivell superior dels serveis.
 
-Veiem l'exemple:
+La declaració dels secrets defineix o fa referència a dades sensibles que es concedeixen als serveis de la vostra aplicació Compose. L'origen del secret és un fitxer o un entorn.
+
+- file: el secret crea dins un arxiu a la ruta especificada.
+- environment: el secret es gestiona com un valor d'una variable d'entorn.
+- external: si es marca com true, external indica que el secret ja existeix, i per tant, Compose no mira de crear-lo. Si el secret no existeix, es produirà un error.
+- name: el nom de l'objecte secret a Docker. Aquest camp s'utilitza per referenciar secrets que contenen caràcters especials.
+
+Alguns exemples bàsics de com utilitzar els secrets de Docker són els següents:
+
+```docker-compose.yml
+secrets:
+  server-certificate:
+    file: ./server.cert
+```
+
+El secret `server-certificate` secret es crea com  <project_name>_server-certificate quan l'aplicació es desplegada, agafant el contingut del fitxer `server.cert` com un secret.
+
+```docker-compose.yml
+secrets:
+  token:
+    environment: "OAUTH_TOKEN"
+```
+
+En aquest segon exemple, el secret `token` es crea com  <project_name>_token quan l'aplicació es desplegada, agafant el valor de la variable d'entorn `OAUTH_TOKEN` com un secret.
+
+El cas del repositori és el següent:
 
 ```docker-compose.yml
 services:
