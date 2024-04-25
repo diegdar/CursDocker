@@ -223,6 +223,8 @@ El següent pas és aplicar els contenidors amb la filosofia dels microserveis, 
 
 Dockers Swarm i Kubernetes (eina desenvolupada per Google) són les dues opcions més habituals per aquesta tasca. Tot i que en els darrers anys, Kubernetes s'ha convertit en l'estàndard de facto per aquesta tasca, tot i això, Docker Swarm és una opció més senzilla i més fàcil d'implementar.
 
+Anteriorment, `Docker Swarm`era una eina independet, però a l'actualitat, forma per de Docker Engine, per tant, no cal instal·lar res addicional per utilitzar Docker Swarm.
+
 ## Desplegament
 
 Un cop tenim les nostres aplicacions empaquetades en contenidors, el següent pas és desplegar-les. Això es pot fer de dues maneres:
