@@ -1,32 +1,33 @@
-# Contenidor mySQL
+# Contenedor mySQL
 
-Una altre exemple de contenidor és el de mySQL. En aquest cas, el contenidor es crea a partir d'una imatge de mySQL que es troba al repositori de DockerHub. Aquesta imatge es descarrega i s'executa amb la comanda:
+Otro ejemplo de contenedor es el de mySQL. En este caso, el contenedor se crea a partir de una imagen de mySQL que se encuentra en el repositorio de DockerHub. Esta imagen se descarga y ejecuta con el pedido:
 
 ```bash
 docker volume create mysql-db-data
-docker run --rm -d -p 3306:3306 --name mysql-db  -e MYSQL_ROOT_PASSWORD=secret --mount src=mysql-db-data,dst=/var/lib/mysql mysql
-```
+docker run --rm -d -p 3306:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD=secret --mount src=mysql-db-data,dst=/var/lib/mysql mysql
+````
 
-El volum mysql-db-data es crea per tal de guardar les dades de la base de dades. Aquest volum es munta al contenidor de mySQL. Això permet que les dades de la base de dades es mantinguin encara que el contenidor es destrueixi.
+El volumen mysql-db-data se crea para guardar los datos de la base de datos. Este volumen se monta en el contenedor de mySQL. Esto permite que los datos de la base de datos se mantengan aunque el contenedor se destruya.
 
-Per connectar-se a la base de dades podeu eines com [MySQL WorkBench](https://www.mysql.com/products/workbench/) o extensions de VSCode com [MySQL](https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-mysql).
+Para conectarse a la base de datos puede utilizar herramientas como [MySQL WorkBench](https://www.mysql.com/products/workbench/) o extensiones de VSCode como [MySQL](https://marketplace.visualstudio.com /items?itemName=formulahendry.vscode-mysql).
 
-Amb l'extensió MySQL dona un error si intenteu contactar amb l'usuari `root`. La solució és crear un usuari nou i connectar-se amb aquest usuari. Per crear un usuari, caldrà en primer lloc, haurem d'entrar dins el contenidor de mySQL:
+Con la extensión MySQL da un error si intenta contactar con el usuario `root`. La solución es crear un usuario nuevo y conectarse con ese usuario. Para crear un usuario, será necesario en primer lugar, deberemos entrar en el contenedor de mySQL:
 
-```bash
 docker exec -it mysql_db bash
-```
 
-Un cop dins el contenidor, crearem un usuari nou:
+Una vez dentro del contenedor, crearemos un nuevo usuario:
 
 ```bash
+**iniciamos el usuario en la linea de comandos de mysql:
 mysql -u root -p
-```
+
+**Ahora nos pedira la contraseña que indicamos antes(aunque la escribamos no se mostrar en la consola pero si se esta haciendo!) : secret
+````
 
 ```sql
-CREATE USER 'user'@'%' IDENTIFIED WITH mysql_native_password BY 'secret';
-GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
-FLUSH PRIVILEGES;
-```
+CREATE USER 'user'@'%' IDENTIFIED WITH mysql_native_password BY 'secreto';
+GRANT AJO PRIVILEGAS DONDE *.* TO 'user'@'%';
+FLUSH PRIVILEGAS;
+````
 
-I ara quan us es crea la connexió usarem l'usuari `user` en comptes de `root`.
+Y ahora cuando se crea la conexión usaremos el usuario `user` en lugar de `root`.

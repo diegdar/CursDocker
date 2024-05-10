@@ -1,25 +1,22 @@
-# Creació imatge Docker
+# Creación imagen Docker
 
-Tenim un arxiu Dockerfile que conté els comands necessaris per crear una imatge Docker que permetrà executar el conegut joc 2048.
+Tenemos un archivo Dockerfile que contiene los comandos necesarios para crear una imagen Docker que permitirá ejecutar el conocido juego 2048.
 
-```language-bash
-docker build -t calonso6/2048 .
-```
+# este comando construye una imagen de Docker llamada diegdar/2048 a partir de los archivos y scripts del directorio actual.
+docker build -t diegdar/2048 .
 
-Provem el nostre contenidor:
+# Probamos nuestros contenedor:
+docker run -it --rm --name 2048 diegdar/2048
 
-```language-bash
-docker run -it --rm --name 2048 calonso6/2048
-```
+# Una vez creada la imagen se puede publicar en el repositorio DockerHub o en lo que queramos:
+    ## indicamos que queremos iniciar sesion en docker e introducimos el usuario y contraseña(aunque no se visualice cuando escribimos la contraseña se estara recibiendo):
+    docker login docker.io
 
-Un cop creada la imatge es pot publicar al repositori DockerHub o al que vulguem:
+    ##subimos la imagen a docker:
+    docker push diegdar/2048
 
-```language-bash
-docker push calonso6/2048
-```
+# También se puede indicar la *versión* añadiendo una etiqueta o *tag*:
+docker tag diegdar/2048 diegdar/2048:v1.0
 
-També es pot indicar la *versió* afegint una etiqueta o *tag*:
-
-```language-bash
-docker tag calonso6/2048 calonso6/2048:v1.0
-```
+# Cerramos sesion en docker:
+docker logout

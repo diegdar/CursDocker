@@ -13,7 +13,8 @@ services:
   db:
     image: mcr.microsoft.com/mssql/server
     container_name: db-sqlserver
-    #user: root
+    # para que funcion hay que descomentar la siguiente linea
+    #user: root 
     networks:
       - app-network-public
     restart: always

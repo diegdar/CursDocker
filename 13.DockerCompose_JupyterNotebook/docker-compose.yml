@@ -2,6 +2,7 @@ version: '3'
 services:
   jupyter:
     build: 
+      # crea una imagen de 0
       context: .
       dockerfile: ./docker/jupyter/Dockerfile
     volumes:
