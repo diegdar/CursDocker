@@ -28,7 +28,7 @@ Docker es pot utilitzar tant en entorns Windows, macOS i Linux i fins i tot en R
 
 En el cas dels equips Windows, es poden executar contenidors Linux gràcies al WSL2 (Windows Subsystem for Linux 2), que permet executar un kernel Linux en Windows. A macOS, Docker utilitza una màquina virtual per executar els contenidors.
 
-En entorns de servidor, Docker s'utilitza per desplegar les aplicacions en contenidors, però també per desplegar serveis com ara bases de dades, servidors web, etc. Això permet tenir un entorn escalable i fàcil de mantenir. Veurem aquests funcionalitats a la UF3 quan parlem de desplegament d'aplicacions.
+En entorns de servidor, Docker s'utilitza per desplegar les aplicacions en contenidors, però també per desplegar serveis com ara bases de dades, servidors web, etc. Això permet tenir un entorn escalable i fàcil de mantenir.
 
 Ara farem una introducció a l'ús de Docker a l'equip client, perquè serà amb ell que hi treballarem amb els servidors web i d'aplicacions com alternativa a utilitzar màquines virtuals.
 
