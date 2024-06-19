@@ -1,7 +1,7 @@
 # Trabajando con volúmenes
 
 * Crearemos un primer volumen:
-docker volume create --name volum_1
+docker volume create --name volumen_1
 
 * Conectaremos el volumen al contenedor:
 docker run -it --rm -v volumen_1:/var/data --name ubuntu1 ubuntu

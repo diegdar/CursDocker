@@ -1,6 +1,6 @@
 # Contenedor mySQL
 
-Otro ejemplo de contenedor es el de mySQL. En este caso, el contenedor se crea a partir de una imagen de mySQL que se encuentra en el repositorio de DockerHub. Esta imagen se descarga y ejecuta con el pedido:
+Otro ejemplo de contenedor es el de mySQL. En este caso, el contenedor se crea a partir de una imagen de mySQL que se encuentra en el repositorio de DockerHub. Esta imagen se descarga y ejecuta con el comando:
 
 ```bash
 docker volume create mysql-db-data
@@ -21,7 +21,7 @@ Una vez dentro del contenedor, crearemos un nuevo usuario:
 **iniciamos el usuario en la linea de comandos de mysql:
 mysql -u root -p
 
-**Ahora nos pedira la contraseña que indicamos antes(aunque la escribamos no se mostrar en la consola pero si se esta haciendo!) : secret
+**Ahora nos pedira la contraseña que indicamos antes(aunque la escribamos no se mostrará en la consola pero si se esta haciendo!) : secret
 ````
 
 ```sql

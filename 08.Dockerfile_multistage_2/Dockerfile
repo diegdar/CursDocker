@@ -1,4 +1,4 @@
-FROM golang:1.18 as builder
+FROM golang:1.18 as BUILDER
 ADD go/ /go/example
 RUN cd /go/example && go build .
 

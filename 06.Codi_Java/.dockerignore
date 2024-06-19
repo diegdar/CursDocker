@@ -1,2 +1,34 @@
-Dockerfile
-README.md
+# Ignora todos los archivos de registro
+*.log
+
+## Ejemplo 1: Ignorar archivos de registro y temporales:
+# Ignora Archivos temporales
+tmp/*
+
+## Ejemplo 2: Omitir directorios de caché y configuraciones locales:
+# Directorio de caché
+node_modules/
+# Configuraciones locales
+.env
+# Directorios de logs específicos
+logs/app1
+logs/app2
+
+## Ejemplo 3: Ignorar archivos grandes y binarios:
+# Archivos grandes
+imágenes/*.jpg
+vídeos/*.mp4
+# Archivos binarios
+archivos/*.bin
+
+## Ejemplo 4: Ignorar archivos específicos con nombres personalizados:
+# Archivo de configuración específico
+configuración-secreta.json
+# Archivo de base de datos local
+db.sqlite
+# Este patrón ignora un archivo específico llamado nombre_archivo dentro de la carpeta Carpeta.
+Carpeta/nombre_archivo
+
+
+
+

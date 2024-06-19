@@ -1,4 +1,6 @@
 
+import java.io.*;
+
 public class Main {
     
     // Function to demonstrate printing pattern 
@@ -27,8 +29,15 @@ public class Main {
     
     public static void main(String[] args) 
     {
-        //int n = Integer.parseInt(args[0]);
-        int n=10;
-        printStars(n); 
-    }
+         try
+         {
+             int n = Integer.parseInt(args[0].trim());
+             printStars(n);
+         }
+         catch(NumberFormatException error)
+         {
+             System.out.println("Argumento must be an integer");
+         }
+     }
+    
 }
