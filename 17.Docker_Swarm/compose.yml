@@ -1,0 +1,33 @@
+#Conjunt de serveis que es desplegaran amb el docker compose up
+services:
+#Plantilla del servei Apache
+  apache:
+    #Fem servir la imatge oficial de php amb apache
+    image: php:apache
+    
+    #Indica que sempre que el servei finalitzi reinicii
+    restart: always
+    volumes:
+      - ./apache:/var/www/html
+    #Exposa el port 80 del contenidor
+    ports:
+    - "80"
+    # Definim el número de instàncies
+    # Alternativament es pot definir amb el paràmetre scale al docker compose up:
+    # docker compose up -d --scale apache=4
+    # El paràmetre --scale sobrescriu l'escalat per defecte quan es fa el docker compose up
+    scale: 2
+  #Plantilla de nginx
+  nginxproxy:
+    image: nginx:latest
+    # Fem un bind del fitxer de configuració com exemple
+    # Si es vulgués publicar l'entorn caldria construir una imatge modificada 
+    # incloent la configuració desitjada.
+    volumes:
+    - ./nginxproxy/nginx.conf:/etc/nginx/nginx.conf:ro
+    #Es marca que depén del servei apache
+    depends_on:
+    - apache
+    #Publica el port 4000 del contenidor al port 80 de la màquina host
+    ports:
+    - "80:4000"

@@ -30,6 +30,7 @@
 - [Docker Compose per desenvolupar aplicacions](16.php_mysql/)
 - [Docker init](14.Docker_init/)
 - [Docker Secrets](15.Docker_Secrets/)
+- [Docker escalant serveis](17.Docker_Swarm/)
 
 ## Recursos i links interessants
 

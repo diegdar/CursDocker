@@ -1,0 +1,14 @@
+#Desplegament usant Docker Swarm
+services:
+#Plantilla del servei Apache
+  apache:
+    #Fem servir la imatge oficial de php amb apache
+    image: php:apache
+    
+    
+    volumes:
+      - ./swarm:/var/www/html
+    # Exposa el port 80 del contenidor al port 80 de la màquina host
+    # Docker Swarm ja s'encarrega de fer el balanceig de càrrega
+    ports:
+    - "80:80"
