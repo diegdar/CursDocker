@@ -1,8 +1,8 @@
-# Exemple imatge multi-stage
+# Ejemplo imagen multi-stage
 
-## Descripció
+## Descripción
 
-En aquest cas veiem un exemple de com fer servir una imatge multi-stage per a reduir la mida de la imatge final.
+En este caso vemos un ejemplo de cómo utilizar una imagen multi-stage para reducir el tamaño de la imagen final.
 
 ## Dockerfile
 
@@ -15,6 +15,11 @@ FROM scratch
 COPY --from=builder /go/example/example /example
 
 ENTRYPOINT [ "/example" ]
-```
+````
 
-Si mirem la mida de les imatges, podem veure com la imatge final és molt més petita que la imatge de la fase de construcció.
+Si miramos el tamaño de las imágenes, podemos ver cómo la imagen final es mucho más pequeña que la imagen de la fase de construcción.
+
+# Para probarlo:
+```bash
+docker build -t demo-go .
+docker run --rm demo-go

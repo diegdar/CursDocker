@@ -5,7 +5,8 @@ En este ejemplo vamos a ejecutar un contenedor Docker que montará la carpeta we
 Como la carpeta la tenemos en nuestro equipo, podemos editar y modificar la web mientras la probamos sobre el servidor web del contenedor. Es una solución muy adecuada cuando se desea desarrollar una aplicación web sin tener que instalar soluciones locales como Xampp y además podemos asegurarnos de trabajar con un entorno de ejecución idéntico al de producción.
 
 ## Procedimiento:
-1.Nos ubicamos primero en la carpeta: cd "C:\Users\diegd.DIEGDAR-PC\OneDrive\FORMACION\Programacion\🐳Docker\Capsula Docker-Cibergnarium\CursDocker\01.VolumMuntat"
+1.Nos ubicamos primero en la carpeta: 
+cd "D:\Google Drive\Mi unidad\Programacion\🐳Docker\Capsula Docker-Cibergnarium\CursDocker\01.VolumMuntat"
 
 2.Primero, obtén la ruta del directorio actual utilizando el comando Get-Location.
 Luego, combina la ruta obtenida con la ruta dentro del contenedor utilizando la concatenación de cadenas.
@@ -15,4 +16,5 @@ Finalmente, utiliza la ruta completa como argumento del volumen en el comando do
 
     docker run -it --rm -v $volumeMountPath -p 80:80 nginx
 
-
+# Para ver el resultado solo hay que entrar a:
+http://localhost/ 

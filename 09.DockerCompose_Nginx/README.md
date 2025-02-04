@@ -1,61 +1,60 @@
-# Exemple compose amb un sol servei
-
-Desplegarem un servei Nginx en mode desenvolupament, que mapeja la carpeta web a dins el contenidor.
+# Ejemplo compose con un solo servicio
+Desplegaremos un servicio Nginx en modo desarrollo, que mapea la carpeta web dentro del contenedor.
 
 ```yaml
-version: "3.9"
-services:
-  webserver:
-    image: nginx
-    ports:
-      - "8080:80"
-    # - "80" Publica el port 80 a un port aleatori del host  
-    volumes:
-      - type: bind
-        source: ./web
-        target: /usr/share/nginx/html
-        read_only: true
-```
+versión: "3.9"
+servicios:
+   webserver:
+     image: nginx
+     puertos:
+       - "8080:80"
+     # - "80" Publica el puerto 80 en un puerto aleatorio del host
+     volúmenes:
+       - type: bind
+         source: ./web
+         target: /usr/share/nginx/html
+         read_only: true
+````
 
-Si obrim un shell dins el contenidor, veurem que no podem modificar els fitxers de la carpeta web, perquè s'ha muntat en model de només lectura.
+Si abrimos un shell dentro del contenedor, veremos que no podemos modificar los archivos de la carpeta web, porque se ha montado en modelo de sólo lectura.
 
-Per desplegar el servei, executem:
+Para desplegar el servicio, ejecutamos:
 
 ```bash
 docker-compose -f compose-dev.yaml up -d
-```
+````
 
-Per aturar el servei, executem:
+Para detener el servicio, ejecutamos:
 
 ```bash
 docker-compose -f compose-dev.yaml down
-```
+````
 
-L'arxiu `compose-prod.yaml` ens permet desplegar el mateix servei en mode producció, sense mapejar cap carpeta, copiant el contingut web a dins la imatge
+El archivo `compose-prod.yaml` nos permite desplegar el mismo servicio en modo producción, sin mapear ninguna carpeta, copiando el contenido web dentro de la imagen
 
 ```yaml
-version: "3.9"
-services:
-  webserver:
-    build: .
-    image: calonso6/web-basic
-    ports:
-      - "8080:80"
-    volumes:
-  ```
+versión: "3.9"
+servicios:
+   webserver:
+     build: .
+     image: calonso6/web-basic
+     puertos:
+       - "8080:80"
+     volúmenes:
+   ````
 
-Per desplegar el servei en mode producció, executem:
+Para desplegar el servicio en modo producción, ejecutamos:
 
 ```bash
 docker-compose -f compose-prod.yaml up -d
-```
+````
 
-Si aturem el servei, modifiquem l'arxiu index.html i tornem a engegar el servei, veurem que no s'ha modificat l'arxiu index.html, perquè no s'ha tornat a construir la imatge.
+Si detenemos el servicio, modificamos el archivo index.html y volvemos a poner en marcha el servicio, veremos que no se ha modificado el archivo index.html, porque no se ha vuelto a construir la imagen.
 
-Si volem assegurar que cada cop que despleguem el servei, es construeixi la imatge, executem:
+Si queremos asegurar que cada vez que desplegamos el servicio, se construya la imagen, ejecute:
 
 ```bash
 docker-compose -f compose-prod.yaml up -d --build
-```
+````
 
-Podem comprovar, com es crea una imatge amb el nom seleccionat, enlloc del nom per defecte.
+Podemos comprobar, cómo se crea una imagen con el nombre seleccionado, en lugar del nombre por defecto.
